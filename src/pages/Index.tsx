@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,29 @@ const Index = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    const elements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    elements.forEach((el) => observerRef.current?.observe(el));
+    
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -216,17 +239,17 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Обо мне</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground scroll-reveal">Обо мне</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed scroll-reveal">
             Я дипломированный психолог с опытом работы более 8 лет. Прошла обучение по когнитивно-поведенческой 
             терапии, гештальт-подходу и системной семейной терапии. Моя миссия — помочь вам найти ответы 
             на важные вопросы, справиться с трудностями и обрести внутренний баланс.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed scroll-reveal">
             В работе я ценю честность, уважение и индивидуальный подход к каждому человеку. 
             Верю, что каждый способен изменить свою жизнь к лучшему.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
+          <div className="flex flex-wrap justify-center gap-4 pt-4 scroll-reveal">
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-primary">8+</div>
               <div className="text-sm text-muted-foreground">лет опыта</div>
@@ -247,12 +270,12 @@ const Index = () => {
       <section id="services" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Услуги</h2>
-            <p className="text-lg text-muted-foreground">Выберите удобный для вас формат работы</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Услуги</h2>
+            <p className="text-lg text-muted-foreground scroll-reveal">Выберите удобный для вас формат работы</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 scroll-reveal">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <Icon name={service.icon} className="text-primary" size={24} />
@@ -274,12 +297,12 @@ const Index = () => {
       <section id="testimonials" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Отзывы клиентов</h2>
-            <p className="text-lg text-muted-foreground">То, что говорят люди после работы со мной</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Отзывы клиентов</h2>
+            <p className="text-lg text-muted-foreground scroll-reveal">То, что говорят люди после работы со мной</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white">
+              <Card key={index} className="bg-white scroll-reveal">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
