@@ -250,6 +250,24 @@ const Index = () => {
             В работе я ценю честность, уважение и индивидуальный подход к каждому человеку. 
             Верю, что каждый способен изменить свою жизнь к лучшему.
           </p>
+          
+          {/* Education Section */}
+          <div className="bg-white p-8 rounded-2xl shadow-md mt-8 scroll-reveal">
+            <div className="flex items-start gap-4 text-left max-w-2xl mx-auto">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Icon name="GraduationCap" className="text-primary" size={32} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold text-foreground">Образование</h3>
+                <p className="text-muted-foreground">
+                  <span className="font-semibold text-foreground">Институт Педагогики и Психологии</span>
+                </p>
+                <p className="text-muted-foreground">Диплом о высшем образовании, 2001 год</p>
+                <p className="text-primary font-medium">Квалификация: Психолог по специализации психология</p>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-wrap justify-center gap-4 pt-4 scroll-reveal">
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-primary">8+</div>
