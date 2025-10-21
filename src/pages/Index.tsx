@@ -9,11 +9,13 @@ import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -142,7 +144,39 @@ const Index = () => {
             <Button onClick={() => scrollToSection('contact')} className="hidden md:inline-flex">
               Записаться
             </Button>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-foreground"
+              aria-label="Меню"
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-2 animate-fade-in">
+              {['home', 'about', 'services', 'testimonials', 'pricing', 'blog', 'faq', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-accent/30 transition-colors rounded"
+                >
+                  {section === 'home' && 'Главная'}
+                  {section === 'about' && 'Обо мне'}
+                  {section === 'services' && 'Услуги'}
+                  {section === 'testimonials' && 'Отзывы'}
+                  {section === 'pricing' && 'Стоимость'}
+                  {section === 'blog' && 'Блог'}
+                  {section === 'faq' && 'FAQ'}
+                  {section === 'contact' && 'Контакты'}
+                </button>
+              ))}
+              <Button onClick={() => scrollToSection('contact')} className="w-full mt-2">
+                Записаться
+              </Button>
+            </div>
+          )}
         </nav>
       </header>
 
