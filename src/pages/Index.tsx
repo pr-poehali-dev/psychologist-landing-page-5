@@ -144,7 +144,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Icon name="Sparkles" className="text-primary" size={24} />
-              <span className="text-xl font-semibold text-foreground">Психолог</span>
+              <span className="text-xl font-semibold text-foreground">Широков Роман</span>
             </div>
             <div className="hidden md:flex gap-6">
               {['home', 'about', 'services', 'testimonials', 'pricing', 'blog', 'faq', 'contact'].map((section) => (
@@ -240,8 +240,9 @@ const Index = () => {
       <section id="about" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground scroll-reveal">Обо мне</h2>
+          <div className="text-2xl font-semibold text-primary mb-4 scroll-reveal">Широков Роман Тимофеевич</div>
           <p className="text-lg text-muted-foreground leading-relaxed scroll-reveal">
-            Я дипломированный психолог с опытом работы более 8 лет. Прошла обучение по когнитивно-поведенческой 
+            Я дипломированный психолог с опытом работы более 8 лет. Прошёл обучение по когнитивно-поведенческой 
             терапии, гештальт-подходу и системной семейной терапии. Моя миссия — помочь вам найти ответы 
             на важные вопросы, справиться с трудностями и обрести внутренний баланс.
           </p>
@@ -482,7 +483,11 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Icon name="Mail" className="text-primary" size={20} />
-                  <span>psychologist@example.com</span>
+                  <a href="mailto:r.zohan@bk.ru" className="hover:text-primary transition-colors">r.zohan@bk.ru</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Icon name="Send" className="text-primary" size={20} />
+                  <span className="text-muted-foreground">Telegram канал (скоро)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Icon name="MapPin" className="text-primary" size={20} />
@@ -509,18 +514,21 @@ const Index = () => {
       <footer className="bg-foreground text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex justify-center gap-6 mb-4">
-            <a href="#" className="hover:text-primary transition-colors">
-              <Icon name="Instagram" size={24} />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <Icon name="Facebook" size={24} />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            <a href="https://wa.me/79262031206" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
               <Icon name="MessageCircle" size={24} />
             </a>
+            <a href="mailto:r.zohan@bk.ru" className="hover:text-primary transition-colors" aria-label="Email">
+              <Icon name="Mail" size={24} />
+            </a>
+            <a href="tel:+79262031206" className="hover:text-primary transition-colors" aria-label="Телефон">
+              <Icon name="Phone" size={24} />
+            </a>
           </div>
+          <p className="text-sm text-gray-400 mb-2">
+            Широков Роман Тимофеевич — Психолог
+          </p>
           <p className="text-sm text-gray-400">
-            © 2024 Психолог. Все права защищены.
+            © 2024 Все права защищены.
           </p>
         </div>
       </footer>
