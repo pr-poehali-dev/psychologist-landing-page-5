@@ -227,8 +227,8 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://cdn.poehali.dev/projects/1d293a7f-58e6-4ccc-8696-2b3359b37cd1/files/9fb8239e-5190-4531-a989-14855f268fce.jpg"
-                alt="Психолог"
+                src="https://cdn.poehali.dev/files/29376ee4-2362-483a-8038-cbff440a62fa.jpg"
+                alt="Широков Роман Тимофеевич - Психолог"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
             </div>
