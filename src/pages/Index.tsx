@@ -412,6 +412,26 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">Потери, развод, переезд, смена работы, возрастные кризисы</p>
               </CardContent>
             </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                  <Icon name="HeartHandshake" className="text-pink-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Сексуальные расстройства</h3>
+                <p className="text-sm text-muted-foreground">Сложности в интимной сфере, проблемы либидо, дисфункции</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
+                  <Icon name="Shield" className="text-slate-600" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">ПТСР и военные травмы</h3>
+                <p className="text-sm text-muted-foreground">Посттравматическое стрессовое расстройство, последствия боевых действий</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
