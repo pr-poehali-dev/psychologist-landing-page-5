@@ -252,7 +252,7 @@ const Index = () => {
           </p>
           
           {/* Education Section */}
-          <div className="bg-white p-8 rounded-2xl shadow-md mt-8 scroll-reveal">
+          <div className="bg-white p-8 rounded-2xl shadow-md mt-8 scroll-reveal space-y-6">
             <div className="flex items-start gap-4 text-left max-w-2xl mx-auto">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Icon name="GraduationCap" className="text-primary" size={32} />
@@ -264,6 +264,19 @@ const Index = () => {
                 </p>
                 <p className="text-muted-foreground">Диплом о высшем образовании, 2001 год</p>
                 <p className="text-primary font-medium">Квалификация: Психолог по специализации психология</p>
+              </div>
+            </div>
+            
+            <div className="border-t pt-6">
+              <div className="flex items-start gap-4 text-left max-w-2xl mx-auto">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="Award" className="text-secondary" size={32} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-foreground">Повышение квалификации</h3>
+                  <p className="text-muted-foreground">2010 год</p>
+                  <p className="text-secondary font-medium">Специальность: Социальная психология</p>
+                </div>
               </div>
             </div>
           </div>
