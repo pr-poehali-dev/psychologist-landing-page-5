@@ -298,8 +298,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Approaches Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Методы работы</h2>
+            <p className="text-lg text-muted-foreground scroll-reveal">Использую проверенные психотерапевтические подходы</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="scroll-reveal">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Icon name="Brain" className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-foreground text-center">Когнитивно-поведенческая терапия (КПТ)</h3>
+                <p className="text-muted-foreground text-sm text-center">
+                  Работа с мыслями и установками, которые влияют на ваше поведение и эмоции. Эффективна при тревожности, депрессии, фобиях.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Icon name="Shapes" className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-foreground text-center">Гештальт-подход</h3>
+                <p className="text-muted-foreground text-sm text-center">
+                  Фокус на осознанности здесь и сейчас, работа с незавершёнными ситуациями и эмоциями. Помогает обрести целостность и понимание себя.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Icon name="Users" className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-foreground text-center">Системная семейная терапия</h3>
+                <p className="text-muted-foreground text-sm text-center">
+                  Рассматриваю проблемы в контексте семьи и отношений. Работа с парами, семейными конфликтами, детско-родительскими отношениями.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Услуги</h2>
@@ -326,7 +373,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-accent/30">
+      <section id="testimonials" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Отзывы клиентов</h2>
