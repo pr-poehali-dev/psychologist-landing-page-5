@@ -436,8 +436,93 @@ const Index = () => {
         </div>
       </section>
 
+      {/* How it works Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Как проходит первая консультация</h2>
+            <p className="text-lg text-muted-foreground scroll-reveal">Простой и понятный процесс начала работы</p>
+          </div>
+          
+          <div className="space-y-6">
+            <Card className="scroll-reveal-left">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-primary">1</span>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground">Знакомство (5-10 минут)</h3>
+                    <p className="text-muted-foreground">
+                      Мы познакомимся, я расскажу о принципах работы, конфиденциальности и создам безопасную атмосферу для разговора.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal-right">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-primary">2</span>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground">Ваш запрос (20-30 минут)</h3>
+                    <p className="text-muted-foreground">
+                      Вы расскажете о том, что вас беспокоит, какие сложности привели вас на консультацию. Я буду внимательно слушать и задавать уточняющие вопросы.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal-left">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-primary">3</span>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground">План работы (15-20 минут)</h3>
+                    <p className="text-muted-foreground">
+                      Я предложу гипотезы о ситуации, мы обсудим возможные направления работы и наметим первые шаги. Вы сможете задать вопросы о процессе терапии.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal-right">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-primary">4</span>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground">Следующие шаги (5 минут)</h3>
+                    <p className="text-muted-foreground">
+                      Мы договоримся о дальнейших встречах, если вы захотите продолжить работу. Решение всегда остаётся за вами.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="mt-8 p-6 bg-accent/30 rounded-xl text-center scroll-reveal">
+            <p className="text-lg text-foreground">
+              <span className="font-bold">Длительность:</span> 50-60 минут
+            </p>
+            <p className="text-muted-foreground mt-2">
+              Первая встреча — это возможность понять, подходим ли мы друг другу для дальнейшей работы
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Услуги</h2>
@@ -464,7 +549,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-accent/30">
+      <section id="testimonials" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Отзывы клиентов</h2>
