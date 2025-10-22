@@ -345,8 +345,79 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Issues Section */}
+      <section className="py-20 px-4 bg-accent/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">С какими запросами работаю</h2>
+            <p className="text-lg text-muted-foreground scroll-reveal">Помогу справиться с широким спектром психологических сложностей</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                  <Icon name="Sparkles" className="text-orange-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Тревожность и страхи</h3>
+                <p className="text-sm text-muted-foreground">Панические атаки, фобии, навязчивые мысли, постоянное беспокойство</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Icon name="CloudRain" className="text-blue-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Депрессия</h3>
+                <p className="text-sm text-muted-foreground">Подавленность, потеря интереса к жизни, усталость, апатия</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                  <Icon name="Heart" className="text-red-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Отношения</h3>
+                <p className="text-sm text-muted-foreground">Конфликты в паре, семейные проблемы, сложности в общении</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                  <Icon name="UserSearch" className="text-purple-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Самооценка</h3>
+                <p className="text-sm text-muted-foreground">Неуверенность в себе, самокритика, поиск себя и своего пути</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                  <Icon name="Flame" className="text-yellow-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Стресс и выгорание</h3>
+                <p className="text-sm text-muted-foreground">Эмоциональное истощение, переутомление, потеря мотивации</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="scroll-reveal hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <Icon name="Milestone" className="text-green-500" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Жизненные кризисы</h3>
+                <p className="text-sm text-muted-foreground">Потери, развод, переезд, смена работы, возрастные кризисы</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-accent/30">
+      <section id="services" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Услуги</h2>
@@ -373,7 +444,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4">
+      <section id="testimonials" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 scroll-reveal">Отзывы клиентов</h2>
